@@ -23,5 +23,5 @@ required.
 Just add following lines to your mcabber config:
 
 ```
-module load slack_autocompletion
+module load slack_completion
 ```
