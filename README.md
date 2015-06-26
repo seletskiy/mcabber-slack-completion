@@ -8,7 +8,7 @@ two special names: `@channel` and `@everyone`.
 ## Installation
 
 Package available in the AUR:
-https://aur4.archlinux.org/packages/mcabber-modules-slack-completion.
+https://aur4.archlinux.org/packages/mcabber-module-slack-completion.
 
 **Warning!** Until [Mcabber Issue
 135](https://bitbucket.org/McKael/mcabber-crew/issue/135/make-register_builtin_cat-exported)
