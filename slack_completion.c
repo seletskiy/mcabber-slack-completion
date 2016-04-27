@@ -26,17 +26,21 @@ static GSList *compl_dyn_resource_slack(void)
     GSList *buddies_last = g_slist_last(buddies);
     GSList *buddy_pointer;
 
+    buddies = g_slist_append(buddies, g_strdup("@here"));
     buddies = g_slist_append(buddies, g_strdup("@channel"));
     buddies = g_slist_append(buddies, g_strdup("@everyone"));
 
     for (
         buddy_pointer = buddies;
-        buddy_pointer != buddies_last;
+        ;
         buddy_pointer = g_slist_next(buddy_pointer)
     ) {
         gchar *old_name = buddy_pointer->data;
         gchar *new_name = g_strdup_printf("@%s", old_name);
         buddies = g_slist_append(buddies, new_name);
+        if (buddy_pointer == buddies_last) {
+            break;
+        }
     }
 
     return buddies;
